@@ -1,0 +1,15 @@
+{
+	"name": "Chromepage",
+	"description": "Personalized override of New Tab",
+
+	"author": "Steggy",
+	
+
+	"version": "1.1",
+	"manifest_version": 3,
+	"permissions": ["bookmarks", "tabs", "activeTab", "scripting", "chrome://favicon/"],
+	"chrome_url_overrides": { "newtab": "index.html" },
+	"background": {
+		"service_worker": "background.js"
+	}
+}
