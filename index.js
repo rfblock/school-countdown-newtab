@@ -53,9 +53,7 @@ const schedule = [
 let port = chrome.runtime.connect({name: "bookmarks"});
 
 let getFavicon = url => {
-	//return `chrome://favicon/${url}`
-	//return `chrome://favicon2/?page_url=${url}&size=128&scale_factor=1x&allow_google_server_fallback=0`
-	return `https://www.google.com/s2/favicons?domain=${url}&sz=256`
+    return chrome.runtime.getURL((`_favicon/?pageUrl=${url}&size=64`));
 }
 
 let loadBookmarks = () => {
